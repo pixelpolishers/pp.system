@@ -1,6 +1,7 @@
 {
     "name": "pixelpolishers/pp.system",
     "description": "The pp.system project contains compiler macros and primitive data types.",
+    "license": "MIT",
     "projects": [{
         "name": "pp.system",
         "type": "static-library",
