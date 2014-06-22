@@ -1,0 +1,37 @@
+{
+    "name": "pixelpolishers/pp.system",
+    "description": "The pp.system project contains compiler macros and primitive data types.",
+    "license": "MIT",
+    "projects": [{
+        "name": "pp.system",
+        "type": "static-library",
+        "pch": {
+            "header": "PP/System/PrecompiledHeader.hpp",
+            "source": "source/PP/System/PrecompiledHeader.cpp"
+        },
+        "paths": {
+            "include": ["includes"]
+        },
+        "configurations": [{
+            "name": "Debug",
+            "debug": true,
+            "output": "libs/$(ideproject.name)_d"
+        },
+        {
+            "name": "Release",
+            "debug": false,
+            "output": "libs/$(ideproject.name)"
+        }],
+        "source": {
+            "extensions": ["cpp", "hpp", "inl"],
+            "paths": ["includes/PP/System", "source/PP/System"],
+            "sources": [{
+                "name": "Compiler",
+                "paths": ["includes/PP/System/Compiler"]
+            }, {
+                "name": "Primitive",
+                "paths": ["includes/PP/System/Primitive"]
+            }]
+        }
+    }]
+}
